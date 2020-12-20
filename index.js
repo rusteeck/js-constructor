@@ -1,20 +1,11 @@
 const model =[
-    {
-        type: 'title',
-        value: 'Hello from js'
-    },
+    {type: 'title', value: 'Hello from js'},
 
-    {
-        type: 'text',
-        value: 'Some text'
-    },
+    {type: 'text', value: 'Some text'},
 
-    {
-        type: 'columns',
-        value: [
-            '1111111','222222','333333333'
-        ]
-    }
+    {type: 'columns', value: ['1111111','222222','333333333']},
+
+    {type: 'image', value: './assets/image.png'}
 ]
 
 const $site = document.querySelector('#site')
@@ -27,6 +18,8 @@ model.forEach(block => {
       html =  title(block)
     } else if (block.type === 'columns'){
         html = columns(block)
+    } else if (block.type === 'image'){
+        html = image(block)
     }
 
 $site.insertAdjacentHTML('beforeend', html)
@@ -60,6 +53,14 @@ function columns(block){
             ${column.join('')}            
         
     )}
+        </div>
+        `
+}
+
+function image(block){
+    return `
+        <div class="row">
+            <img src="${block.value}"/>
         </div>
         `
 }
