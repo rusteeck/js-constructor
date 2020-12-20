@@ -37,4 +37,9 @@ function image(block){
         `
 }
 
-export {title, text,columns, image}
+export const templates = {
+    title: title, // можно просто title, text, ... тк если ключ и значение совпадают по имени,
+    text: text,                                         // то можно не записывать дважды
+    columns: columns,
+    image: image
+}
