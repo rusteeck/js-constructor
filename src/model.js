@@ -1,5 +1,5 @@
 import image from './assets/image.png'
-import {Block} from './classes/blocks'
+import {TextBlock, ColumnsBlock, TitleBlock, ImageBlock} from './classes/blocks'
 
 const columnsText = ['Choose a job you love, and you will never have to work a day in your life.' +
 'Choose a job you love, and you will never have to work a day in your life.'
@@ -8,7 +8,7 @@ const columnsText = ['Choose a job you love, and you will never have to work a d
     ' For as long as men massacre animals, they will kill each other.']
 
 export const model = [
-    new Block('title', 'Site constructor on pure js', {
+    new TitleBlock('Site constructor on pure js', {
         tag: 'h2',
         styles: {
             background: 'linear-gradient(to right, #ff0099, #493240)',
@@ -18,7 +18,7 @@ export const model = [
         }
     }),
 
-    new Block('image', image, {
+    new ImageBlock(image, {
         styles: {
             padding: '2rem',
             display: 'flex',
@@ -31,7 +31,7 @@ export const model = [
         alt: 'Это картинка'
     }),
 
-    new Block('text', 'We buy things we don\'t need, to impress people we don\'t like',  {
+    new TextBlock( 'We buy things we don\'t need, to impress people we don\'t like',  {
         styles: {
             background: 'linear-gradient(to left, #ff0099, #493240)',
             'font-family': 'KarollaC',
@@ -43,7 +43,7 @@ export const model = [
         }
     }),
 
-    new Block('columns', columnsText, {
+    new ColumnsBlock(columnsText, {
         styles: {
             background: 'linear-gradient(to right, #ff0099, #493240)',
             'font-family': 'KarollaC',
