@@ -1,3 +1,2 @@
-# Автоматический деплой с ветки 'master' на https://js-templator.web.app/
+# auto deploy from 'master' on https://js-templator.web.app/
 
-Приложение - конструктор html блоков, написанный на чистом JS
